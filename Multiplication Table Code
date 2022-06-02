@@ -1,0 +1,47 @@
+/******************************************************************************
+
+This program provides a multiplication table for the user by asking the user to 
+input their choice of column and rows.
+By: Hiva Hakimzadeh
+03/16/22
+
+******************************************************************************/
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    int rows,columns;
+    cout<<"Multiplication Table Tool"<<endl<<endl;
+    cout<<"How many rows would you like?";
+    cin>>rows;
+    cout<<"How many columns would you like?";
+    cin>>columns;
+    cout << "  ";
+    for(int b=1;b<=columns;b++)
+    {
+     cout<<setw(7)<<b;
+    }
+    cout<<endl;
+    for(int b=1;b<=columns;b++)
+    {
+       cout<<"__________";
+    }
+    cout<<endl;
+    for(int i=1; i<=rows;i++)
+    {
+       if(i<10)
+       cout<<" "<<i<<"|"<<setw(5);
+       else
+       cout<<i<<"|"<<setw(5);
+       for(int x=1; x<=columns;x++)
+       {
+           
+           cout<<setw(7)<<i*x;
+       }
+       cout<<endl;
+    }
+    
+}
